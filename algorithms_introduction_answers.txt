@@ -1,0 +1,43 @@
+1. Using proper pseudo-code, describe the following primitive algorithms:
+
+Making coffee;
+
+GET coffee beans
+PUT coffee beans into grinder
+GRIND coffee beans
+ADD water to coffee machine
+ADD coffee filter to coffee machine
+ADD coffee grounds to coffee filter
+TURN on coffee machine
+
+Washing dishes;
+
+GET dirty dishes
+GET soap
+ADD soap to dish
+GET sponge
+ADD water to soap and dish
+BRUSH sponge on soap and dish together
+WASH dish over water
+
+A choice of your own. 
+
+(Making Tea)
+
+GET teabag
+GET mug
+GET water AND add it to a pot
+HEAT pot of water to boil
+ADD hott water to teabag && mug
+ADD honey & OR milk as needed
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+Three other algorithms would be Cocoa-Colas secret soda recipe. This secret recipe is the intellectual property that makes Cocoa-Cola such a wealthy brand, without this secret algorithm recipe, Cocoa-Cola would just be TAB. 
+Another great example of a company with a great algorithm would be Facebook and the algorithm that they use in order to decide what to show their users in their feeds. This algorithm is extremely important in that Facebook needs to make sure that they are showing their users the content that they want to see in order to stay on their platform and click on their ads.
+Lastly another company with a very important algorithm would be the app Tinder which uses an algorithm to show you potential dating matches based off of your interests and shows you these matches in order to keep you swiping within their app.
+
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+An efficient algorithm is one that wouldn't have to repeat itself in order to do the same task. It would just have to do one job one time and use the DRY principle of not repeating itself. It would also, be the fastest way of doing a certain task in the shortest amount of time with the least amount of code possible. 
