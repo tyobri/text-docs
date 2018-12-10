@@ -42,16 +42,23 @@ END FUNCTION
 5a. The following function prints the subtotal of a customer's transaction and receives payment accordingly.
 
 FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
-   PRINT "Your total due is: " + subTotal * discountRate + (subTotal * tax)
+
+   TOTAL = "Your total due is: " + subTotal * discountRate + (subTotal * tax)
+
+   PRINT TOTAL
 
    IF paymentType = 'CASH' THEN
        CALL getPayment RETURNING amount
-       PRINT "Change due: " + amount - subTotal * discountRate + (subTotal * tax)
+       PRINT "Change due: " + amount - TOTAL
+
    ELSE IF paymentType = 'CREDIT CARD' THEN
        CALL getPayment RETURNING amount
-       PRINT "Your credit card has been charged: " + subTotal * discountRate + (subTotal * tax)
+       PRINT "Your credit card has been charged: " + TOTAL
    END IF
+
 END FUNCTION
+
+In this example I made TOTAL into it's own variable utilizing the DRY principle instead of having to repeat the same equation over and over again I can just call the TOTAL variable instead each time.
 
 
 5b. The following function checks out a book if there are no issues with the guest's account.
@@ -67,50 +74,41 @@ END FUNCTION
 
 5c. The following class is a code snippet that should support the transactions a customer can perform at an ATM.
 
-CLASS BankAccount
+CLASS BankServices
 
-CLASS Balance
  FUNCTION displayBalance
     PRINT balance
  END FUNCTION
- END CLASS
 
- CLASS Deposit
  FUNCTION deposit(amount)
     SET balance to balance + amount
  END FUNCTION
-END CLASS
 
-CLASS Wirthdraw
  FUNCTION withdraw(amount)
      IF balance > amount THEN
        SET balance to balance - amount
      END
  END FUNCTION
+
  END CLASS
 
-CLASS CreditCard
+CLASS MarketingServices
+
  FUNCTION creditCardOffer
      IF NOT(customer.hasCreditCard) THEN
          CALL offerCreditCard
      END
  END FUNCTION
-END CLASS
 
-CLASS Checking
  FUNCTION checkStatus
      IF NOT(customer.hasCheckingAccount) THEN
          CALL offerCheckingAccount
      END
  END FUNCTION
-END CLASS
-
-
- ....
- ....
- ....
 
 END CLASS
+
+In this example I used the single responisibility principle in dividing up the two classes depeneding on whether it was a Banking Service function or for a Marketing the banks additional services. Each function and class should only have one responsibilty which decreases the amount of maintenance problems later on in your project.
 
 6. Square Given an array of integers, find out whether the sum of the integers is a perfect square. If it is a perfect square, return the square root, otherwise return the sum.
 
