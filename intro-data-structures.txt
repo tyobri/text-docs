@@ -13,17 +13,13 @@ line.push ("Mary");
 
 c) Find a person in line named "Josh." This function should return the position of 2 in the array, (recall that arrays are 0-based).
 
-function findJosh(){
-  var joshPlace = line.indexOf("Josh");
-  return joshPlace;
+function findPlace(name){
+  return line.indexOf(name);
 }
+
+Instead of making a new function for each person I just made a generic function to find a person in the array for any name, instead of making a function for each persons name like I had before utilizing the DRY principle of not repeating the same code over again.
 
 d) Find a person in line named "Emily." What should your function return if it does not find the item in the array?
-
-function findEmily(){
-  var emilyPlace = line.indexOf("Emily");
-  return emilyPlace;
-}
 
 It returns -1, which means that it is not in the array since arrays start at 0.
 
@@ -41,4 +37,4 @@ Another real world example that I can model using a data structure would be a fa
 
 3. How would your data structure allow developers to access and manipulate the data?
 
-A data structure would allow developers to manipulate the data, by adding and deleting new family members to the family tree depending one their lineage.
+A data structure would allow developers to manipulate the data, by adding and deleting new family members to the family tree depending on their lineage.
